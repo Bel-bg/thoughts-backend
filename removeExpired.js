@@ -1,5 +1,5 @@
 const cron = require("node-cron");
-const supabase = require("./supabaseClients");
+const supabase = require("./supabaseClient");
 
 // Toutes les 15min, les pensées de plus de 24h seront supprimé
 
