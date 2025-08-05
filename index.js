@@ -17,16 +17,22 @@ app.post("/post-thought", async (req, res) => {
     return res.status(400).json({ error: "Pensée trop longue ou vide" });
   }
 
-  const { data, error } = await supabase.from("thoughts").insert([
-    {
-      username,
-      avatar_url,
-      content,
-      created_at: new Date().toISOString(),
-    },
-  ]);
+  const { data, error } = await supabase
+    .from("thoughts")
+    .insert([
+      {
+        username,
+        avatar_url,
+        content,
+        created_at: new Date().toISOString(),
+      },
+    ])
+    .select();
 
-  if (error) return res.status(500).json({ error });
+  if (error) {
+    console.error("Ce n'est pas vôtre faute c'est la nôtre :", error.message);
+    return res.status(500).json({ error: error.message });
+  }
 
   res.status(201).json(data[0]);
 });
