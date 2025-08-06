@@ -5,6 +5,7 @@ require("dotenv").config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+const sendPushNotificationToAllUsers = require("./sendNotifications");
 
 app.use(cors());
 app.use(express.json());
@@ -35,6 +36,15 @@ app.post("/post-thought", async (req, res) => {
   }
 
   res.status(201).json(data[0]);
+
+  try {
+    await sendPushNotificationToAllUsers(
+      `${username} a publié une nouvelle pensée`
+    );
+  } catch (err) {
+    console.error("Erreur lors de l'envoi de la notification :", err);
+  }
+  ù;
 });
 
 // Récupérer les pensées valides
