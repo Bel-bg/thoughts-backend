@@ -35,16 +35,15 @@ app.post("/post-thought", async (req, res) => {
     return res.status(500).json({ error: error.message });
   }
 
-  res.status(201).json(data[0]);
-
   try {
     await sendPushNotificationToAllUsers(
       `${username} a publié une nouvelle pensée`
     );
   } catch (err) {
     console.error("Erreur lors de l'envoi de la notification :", err);
-  }
-  ù;
+  };
+
+  res.status(201).json(data[0]);
 });
 
 // Récupérer les pensées valides
