@@ -14,6 +14,7 @@ cron.schedule("*/15 * * * * ", async () => {
   if (error) {
     console.error("Erreur suppression pensées expirées:", error);
   } else {
-    console.log("✅ Les pensées expirées ont été supprimées."); 
+    const count = data ? data.length : 0;
+    console.log(`Pensées expirées supprimées: ${count}`);
   }
 });
