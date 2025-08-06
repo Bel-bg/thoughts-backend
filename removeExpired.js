@@ -6,14 +6,15 @@ const supabase = require("./supabaseClient");
 cron.schedule("*/15 * * * * ", async () => {
   const oneDayAgo = new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString();
 
-  const { data, error } = await supabase
+  const { count, error } = await supabase
     .from("thoughts")
     .delete()
-    .lt("created_at", oneDayAgo);
+    .lt("created_at", oneDayAgo)
+    .select('count'); 
 
   if (error) {
     console.error("Erreur suppression pensées expirées:", error);
   } else {
-    console.log(`✅ Pensées expirées supprimées: ${data.length}`);
+    console.log(`✅ Pensées expirées supprimées: ${count}`); 
   }
 });
