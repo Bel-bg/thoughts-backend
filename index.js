@@ -2,7 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const supabase = require("./supabaseClient");
 const postRoutes = require("./routes/Post");
-const commentRoutes = require("./routes/comments");
+const commentRoutes = require("./routes/comment");
 const likeRoutes = require("./routes/like");
 require("dotenv").config();
 

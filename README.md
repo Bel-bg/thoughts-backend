@@ -2,6 +2,8 @@
 
 Backend Node.js/Express pour le service de partage de pensées de l'application mobile IG-Live.
 
+> 📖 **Navigation** : [Index de la Documentation](INDEX.md) | [Quick Start](QUICK_START.md) | [Installation BDD](INSTALLATION_DB.md)
+
 ## 🚀 Fonctionnalités
 
 ### ✅ Gestion des Pensées
@@ -179,3 +181,55 @@ Ce backend fait partie du projet IG-Live ENEAM Mobile.
 ## 📄 Licence
 
 ISC
+
+---
+
+## 📁 Fichiers du Projet
+
+```
+Backend_Notes/
+├── 📄 README.md                    ← Vous êtes ici
+├── 📖 INDEX.md                     ← Navigation complète
+├── ⚡ QUICK_START.md               ← Installation rapide (5 min)
+├── 🗄️ INSTALLATION_DB.md           ← Guide BDD détaillé
+├── 📊 SUMMARY.md                   ← Résumé du projet
+├── 📝 CHANGELOG.md                 ← Historique des versions
+├── 📁 FILES_SUMMARY.md             ← Structure des fichiers
+├── 🗂️ SQL_FILES_GUIDE.md           ← Guide des fichiers SQL
+│
+├── 💻 Code Backend
+│   ├── index.js                    ← Point d'entrée principal
+│   ├── supabaseClient.js           ← Configuration Supabase
+│   ├── sendNotifications.js        ← Notifications push
+│   ├── removeExpired.js            ← Nettoyage automatique
+│   └── routes/
+│       ├── like.js                 ← API des likes
+│       ├── Post.js                 ← API des posts
+│       └── comments.js             ← API des commentaires
+│
+├── 🗄️ Base de Données
+│   ├── database.sql                ← Script SQL complet
+│   ├── test_queries.sql            ← Requêtes de test
+│   └── migrations/
+│       ├── 001_initial_setup.sql
+│       ├── 002_security_policies.sql
+│       └── 003_functions_and_views.sql
+│
+└── ⚙️ Configuration
+    ├── .env                        ← Variables d'environnement
+    ├── .env.example                ← Template de configuration
+    ├── .gitignore                  ← Fichiers à ignorer
+    └── package.json                ← Dépendances Node.js
+```
+
+---
+
+## 🎯 Liens Rapides
+
+- 📖 [Index de la Documentation](INDEX.md)
+- ⚡ [Quick Start - Installation en 5 min](QUICK_START.md)
+- 🗄️ [Guide d'Installation BDD](INSTALLATION_DB.md)
+- 📊 [Résumé du Projet](SUMMARY.md)
+- 📝 [Changelog](CHANGELOG.md)
+- 🗂️ [Guide des Fichiers SQL](SQL_FILES_GUIDE.md)
+- 📁 [Structure des Fichiers](FILES_SUMMARY.md)
