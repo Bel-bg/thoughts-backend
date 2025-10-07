@@ -7,7 +7,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// 🚀 Route de test
+//  Route de test
 app.get("/", (req, res) => {
   res.send("Backend de publication prêt à recevoir !");
 });
