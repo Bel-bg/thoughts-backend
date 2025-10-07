@@ -43,7 +43,7 @@ app.post("/api/post", async (req, res) => {
   res.status(201).json({ message: "Publication enregistrée", post: data[0] });
 });
 
-const PORT = process.routes.env.PORT || 3001;
+const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
   console.log(`🔥 Serveur démarré sur le port ${PORT}`);
 });

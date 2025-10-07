@@ -101,6 +101,19 @@ Liker ou retirer le like d'une pensée
 
 ## 📦 Installation
 
+### 1. Configurer la Base de Données
+
+```bash
+# Voir le guide détaillé dans INSTALLATION_DB.md
+```
+
+1. Connectez-vous à [Supabase](https://supabase.com)
+2. Ouvrez le **SQL Editor**
+3. Exécutez le fichier `database.sql` (ou les migrations dans `migrations/`)
+4. Vérifiez que les 3 tables sont créées : `thoughts`, `thought_likes`, `users`
+
+### 2. Installer les Dépendances Backend
+
 ```bash
 # Installer les dépendances
 npm install
